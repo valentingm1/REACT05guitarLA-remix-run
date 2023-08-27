@@ -6,7 +6,7 @@ export default function Guitarra({guitarra}) {
 
     return (
         <div className="guitarra">
-            <img src={imagen.data.attributes.formats.medium.url} alt={`Imagen guitarra ${nombre}`} />
+            <Link to={`/guitarras/${url}`}><img src={imagen.data.attributes.formats.medium.url} alt={`Imagen guitarra ${nombre}`} /></Link>
             <div className="contenido">
                 <h3>{nombre}</h3>
                 <p className="descripcion">{descripcion}</p>
