@@ -118,3 +118,35 @@
   text-align: center;
  
 }
+
+.error, .error-enlace{
+  font-size: 2.4rem;
+  text-align: center;
+  margin: 5rem;
+}
+
+.error-enlace{
+  display: block;
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.enlace{
+  margin-top: 2rem;
+  display: block;
+  background-color: var(--black);
+  color: var(--white);
+  text-decoration: none;
+  padding: .5rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 900;
+  transition-property: background-color;
+  transition-duration: 400ms;
+}
+
+.enlace:hover{
+  background-color: var(--primary);
+}
