@@ -39,7 +39,7 @@ export default function Post() {
   const { titulo, contenido, imagen, publishedAt } = post.data[0].attributes;
 
   return (
-    <main>
+
       <article className="contenedor post mt-3">
         <img
           className="imagen"
@@ -52,6 +52,6 @@ export default function Post() {
           <p className="texto">{contenido}</p>
         </div>
       </article>
-    </main>
+
   );
 }

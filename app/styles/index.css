@@ -61,6 +61,7 @@
   display: flex;
   gap: 2rem;
   margin-top: 5rem;
+  align-items: center;
 }
 @media (min-width: 768px) {
   .header .navegacion {
@@ -76,10 +77,15 @@
   padding: .5rem;
   transition-property: background-color;
   transition-duration: 300ms;
+  
 }
 .header .navegacion a:hover,
 .header .active {
   background-color: var(--primary);
+}
+
+.header .navegacion img{
+  width: 3rem;
 }
 
 /** Footer **/
@@ -114,6 +120,11 @@
   text-decoration: none;
   font-weight: 700;
 }
+
+.footer .navegacion a:last-of-type{
+  display: none
+}
+
 .footer .copyright {
   text-align: center;
  

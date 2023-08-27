@@ -1,7 +1,9 @@
 import{ Meta, Links, Outlet, Scripts, LiveReload, useRouteError, isRouteErrorResponse, Link } from "@remix-run/react"
+import { useState } from "react"
 import styles from "./styles/index.css"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
+import Guitarra from "./components/Guitarra"
 
 export function meta(){
   return [
@@ -43,9 +45,31 @@ export function links(){
 }
 
 export default function App() {
+
+  const [carrito, setCarrito] = useState([])
+
+  const agregarCarrito = guitarra => {
+    if(carrito.some(guitarraState => guitarraState.id === guitarra.id)){
+
+
+      const carritoUpdateado = carrito.map(guitarraState => {
+        if(guitarraState.id === guitarra.id){
+          guitarraState.cantidad = guitarra.cantidad
+        }
+        return guitarraState
+      })
+      setCarrito(carritoUpdateado)
+    }else {
+      setCarrito([...carrito, guitarra])
+    }
+  }
+
+
   return(
       <Document>
-          <Outlet />
+          <Outlet context={{
+            agregarCarrito
+          }}/>
       </Document>
   )
 }
