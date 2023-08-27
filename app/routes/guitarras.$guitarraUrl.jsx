@@ -58,9 +58,9 @@ function Guitarra() {
       />
 
       <div className="contenido">
-        <h3>Nombre</h3>
+        <h3>{nombre}</h3>
         <p className="texto">{descripcion}</p>
-        <p className="precio">{precio}</p>
+        <p className="precio">${precio}</p>
       </div>
     </main>
   );

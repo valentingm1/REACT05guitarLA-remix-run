@@ -4,6 +4,13 @@ import Post from "~/components/Post.jsx"
 import styles from "~/styles/blog.css"
 
 
+export function meta(){
+  return [{
+    title: "GuitarLA - Blog",
+    description: "GuitarLA, Blog de música y venta de guitarras"
+  }]
+}
+
 export function links(){
   return [{
     rel:"stylesheet",
