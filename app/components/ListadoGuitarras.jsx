@@ -1,6 +1,6 @@
 import Guitarra from "./Guitarra";
 
-function ListadoGuitarras({guitarras}) {
+function ListadoGuitarras({ guitarras }) {
   return (
     <>
       <h2 className="heading">Nuestra Colección</h2>

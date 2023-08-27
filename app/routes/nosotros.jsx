@@ -1,25 +1,27 @@
 import imagen from "../../public/img/nosotros.jpg";
 import styles from "../styles/nosotros.css";
 
-export function meta(){
-  return [{
-    title: "Guitar LA - Sobre Nosotros",
-    description: "Venta de guitarras, blog de música"
-  }]
+export function meta() {
+  return [
+    {
+      title: "Guitar LA - Sobre Nosotros",
+      description: "Venta de guitarras, blog de música",
+    },
+  ];
 }
 
-export function links(){
+export function links() {
   return [
     {
       rel: "stylesheet",
-      href: styles
+      href: styles,
     },
     {
       rel: "preload",
       href: imagen,
-      as: "image"
-    }
-  ]
+      as: "image",
+    },
+  ];
 }
 
 function Nosotros() {

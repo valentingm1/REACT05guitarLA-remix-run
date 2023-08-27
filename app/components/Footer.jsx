@@ -1,15 +1,17 @@
-import Navegacion from "./Navegacion"
+import Navegacion from "./Navegacion";
 
 function Footer() {
   return (
     <footer className="footer">
-        <div className="contenedor contenido">
-            <Navegacion />
+      <div className="contenedor contenido">
+        <Navegacion />
 
-            <p className="copyright">Todos los derechos reservados { new Date().getFullYear() } </p>
-        </div>
+        <p className="copyright">
+          Todos los derechos reservados {new Date().getFullYear()}{" "}
+        </p>
+      </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

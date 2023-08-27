@@ -6,7 +6,8 @@ import ListadoGuitarras from "~/components/ListadoGuitarras";
 import ListadoPosts from "~/components/ListadoPosts";
 import Curso from "~/components/Curso";
 import stylesGuitarras from "~/styles/guitarras.css";
-import stylesPosts from "~/styles/blog.css"
+import stylesPosts from "~/styles/blog.css";
+import stylesCurso from "~/styles/curso.css";
 
 export function meta() {
   return [
@@ -25,18 +26,26 @@ export function links() {
     },
     {
       rel: "stylesheet",
-      href: stylesPosts
-    }
+      href: stylesPosts,
+    },
+    {
+      rel: "stylesheet",
+      href: stylesCurso,
+    },
   ];
 }
 
 export async function loader() {
-  const [guitarras, posts, curso] = await Promise.all([getGuitarras(), getPosts(), getCurso()]);
+  const [guitarras, posts, curso] = await Promise.all([
+    getGuitarras(),
+    getPosts(),
+    getCurso(),
+  ]);
 
   return {
     guitarras: guitarras.data,
     posts: posts.data,
-    curso: curso.data
+    curso: curso.data,
   };
 }
 
@@ -46,18 +55,11 @@ function Index() {
   return (
     <>
       <main className="contenedor">
-        <ListadoGuitarras
-        guitarras={guitarras}
-        />
+        <ListadoGuitarras guitarras={guitarras} />
       </main>
-      <Curso
-      curso={curso.attributes}
-      />
+      <Curso curso={curso.attributes} />
       <section className="contenedor">
-        <h2 className="heading">Nuestros Artículos</h2>
-        <ListadoPosts
-        posts={posts}
-        />
+        <ListadoPosts posts={posts} />
       </section>
     </>
   );
