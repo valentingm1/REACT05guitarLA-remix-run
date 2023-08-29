@@ -13,8 +13,20 @@ export function links() {
 }
 
 function Carrito() {
+
   const [total, setTotal] = useState(0);
   const { carrito, actualizarCantidad, eliminarProducto } = useOutletContext();
+
+  const handleCompra = (e) => {
+    e.preventDefault();
+
+    if(total == 0){
+      alert("Agrega un producto antes de proceder con tu compra")
+      return;
+    } else{
+      alert("Compra procesada, estamos preparando tu producto")
+    }
+  }
 
   useEffect(() => {
     const calcTotal = carrito.reduce(
@@ -32,9 +44,9 @@ function Carrito() {
         <div className="carrito">
           <h2>Artículos</h2>
 
-          {carrito.length === 0
+          {carrito?.length === 0
             ? "Carrito vacío"
-            : carrito.map((producto) => (
+            : carrito?.map((producto) => (
                 <div key={producto.id} className="producto">
                   <div>
                     <img
@@ -79,6 +91,7 @@ function Carrito() {
         <aside className="resumen">
           <h3>Resumen del pedido</h3>
           <p>Total a pagar:${total}</p>
+          <button type="submit" className="btn_comprar" onClick={handleCompra}>COMPRAR</button>
         </aside>
       </div>
     </main>

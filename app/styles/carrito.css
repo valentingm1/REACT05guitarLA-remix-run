@@ -78,3 +78,25 @@
     top: 3rem;
     right: 1rem;
 }
+
+.resumen button[type="submit"]{
+    margin-top: 3rem;
+    background-color: var(--black);
+    color: var(--white);
+    text-transform: uppercase;
+    padding: 1.4rem;
+    font-weight: 700;
+    border: none;
+    transition-property: background-color;
+    transition-duration: 300ms;
+    width: 100%;
+}
+
+.resumen button[type="submit"]:hover{
+    cursor: pointer;
+    background-color: var(--primary);
+}
+
+.navegacion{
+    align-self: center;
+}

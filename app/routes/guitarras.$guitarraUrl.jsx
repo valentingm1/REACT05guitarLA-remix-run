@@ -48,6 +48,8 @@ function Guitarra() {
     if (cantidad < 1) {
       alert("Se debe seleccionar una cantidad");
       return;
+    } else{
+      alert("Se agregó tu producto al carrito")
     }
 
     const guitarraSeleccionada = {
